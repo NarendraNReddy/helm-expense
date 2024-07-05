@@ -1,0 +1,6 @@
+#.Values.deployment.replicas
+deployment:
+  replicas: 1
+  imageVersion: v1.0
+#.Values.deployment.imageVersion  
+
