@@ -5,7 +5,7 @@ configmap:
 #.Values.deployment.imageversion
 deployment:
   replicas: 2
-  imageversion: latest
+  imageVersion: latest
 #.Values.service.port 
 service:
   port: 8080
