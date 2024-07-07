@@ -6,7 +6,7 @@ configmap:
 #.Values.configmap.nodePort }}#31786  
 deployment:
   replicas: 2
-  imageVersion: latest
+  imageVersion: stable-perl
 #.Values.service.port 
 service:
   port: 8080
