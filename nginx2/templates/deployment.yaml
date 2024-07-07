@@ -1,28 +1,26 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nginx
-  namespace: expense
   labels:
-    app: nginx 
-    purpose: helm
+    app: nginx
+    purpose: deployment
     tier: web
 spec:
   replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
-      app: nginx 
-      purpose: helm
+      app: nginx
       tier: web
-spec:
+      project: test-project
   template:
     metadata:
       labels:
-        app: nginx 
-        purpose: helm
+        app: nginx
         tier: web
-spec:
+        project: test-project
+        extra-key: extra-value
     spec:
       containers:
-      - name: nginx 
+      - name: nginx
         image: nginx:{{ .Values.deployment.imageVersion }}
