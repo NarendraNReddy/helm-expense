@@ -1,0 +1,11 @@
+#.Values.configmap.port
+configmap:
+  port: 8080
+#.Values.deployment.replicas  
+#.Values.deployment.imageversion
+deployment:
+  replicas: 2
+  imageversion: latest
+#.Values.service.port 
+service:
+  port: 8080
