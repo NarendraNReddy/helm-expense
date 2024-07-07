@@ -3,9 +3,12 @@ configmap:
   port: 8080
 #.Values.deployment.replicas  
 #.Values.deployment.imageversion
+#.Values.configmap.nodePort }}#31786  
 deployment:
   replicas: 2
   imageVersion: latest
+  nodePort: 31786
 #.Values.service.port 
 service:
   port: 8080
+

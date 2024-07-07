@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: nginx
 spec:
+  type: LoadBalancer
   selector:
     app: nginx 
     purpose: helm
@@ -11,3 +12,4 @@ spec:
   - protocol: TCP
     port: 80 #service port
     targetPort: {{ .Values.service.port }} #Target port
+    nodePort: {{ .Values.configmap.nodePort }}#31786
